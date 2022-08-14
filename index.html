@@ -114,7 +114,7 @@
 <!-- Модуль 6, занятие 11. DOM -->
 
 
-<ul>
+<!-- <ul>
     <li>First item</li>
     <li>Second item</li>
     <li>Third item</li>
@@ -138,5 +138,36 @@ const listItems = list.children;
 console.log(listItems);
 
     </script>
-  </ul>
+  </ul> -->
 
+
+  <!-- поиск элемента -->
+
+
+  <ul id="menu" class="menu">
+    <li class="menu-item">home</li>
+    <li class="menu-item">about</li>
+    <li class="menu-item">gallery</li>
+    <li>blog</li>
+
+    <script>
+const listWithId = document.querySelector('#menu');
+listWithId.style.textTransform = 'uppercase';
+listWithId.style.fontSize = '24px';
+console.log(listWithId);
+
+const listWithClass = document.querySelector('.menu');
+console.log(listWithClass);
+
+const menuItemsByTagName = document.querySelectorAll("li");
+console.log(menuItemsByTagName);
+
+const menuItemsByClass = document.querySelectorAll(".menu-item");
+console.log(menuItemsByClass);
+
+const firstMenuItem = document.querySelector(".menu-item");
+firstMenuItem.style.color = 'tomato';
+console.log(firstMenuItem);
+
+    </script>
+  </ul>
