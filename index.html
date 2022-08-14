@@ -144,7 +144,7 @@ console.log(listItems);
   <!-- поиск элемента -->
 
 
-  <ul id="menu" class="menu">
+  <!-- <ul id="menu" class="menu">
     <li class="menu-item">home</li>
     <li class="menu-item">about</li>
     <li class="menu-item">gallery</li>
@@ -170,4 +170,37 @@ firstMenuItem.style.color = 'tomato';
 console.log(firstMenuItem);
 
     </script>
-  </ul>
+  </ul> -->
+
+
+  <textarea id="message" class="materialize-textarea" rows="5">Default textarea message</textarea>
+
+<div>
+  <a href="/home" class="btn">home</a>
+  <a href="/about" class="btn active">about</a>
+  <a href="/gallery" class="btn">gallery</a>
+</div>
+
+<style>
+    body {
+  margin: 24px;
+}
+</style>
+<br>
+<img class="image" src="https://placeimg.com/640/480/animals" alt="" width="320" />
+
+<script>
+//===================================================
+const message = document.querySelector("#message");
+console.log(message.value); // Default textarea message
+
+//===================================================
+const activeLink = document.querySelector(".btn.active");
+console.log(activeLink.href); // https://s.codepen.io/about
+
+//===================================================
+const image = document.querySelector(".image");
+console.log(image.src); // https://placeimg.com/640/480/animals
+image.src = 'https://placeimg.com/640/480/tech';
+
+</script>
