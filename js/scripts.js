@@ -69,20 +69,41 @@
 
 // 6
 
-const form = document.querySelector(".form");
+// const form = document.querySelector(".form");
 
-form.addEventListener("submit", handleSubmit);
+// form.addEventListener("submit", handleSubmit);
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const {
-    elements: { login, password }
-  } = event.currentTarget;
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const {
+//     elements: { login, password }
+//   } = event.currentTarget;
 
-  if (login.value === "" || password.value === "") {
-    return console.log("Please fill in all the fields!");
-  }
+//   if (login.value === "" || password.value === "") {
+//     return console.log("Please fill in all the fields!");
+//   }
 
-  console.log(`Login: ${login.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
+//   console.log(`Login: ${login.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
+// }
+
+
+
+// 7
+
+const select = document.querySelector(".pizza-select");
+const textOutput = document.querySelector(".text-output");
+const valueOutput = document.querySelector(".value-output");
+
+setOutput();
+
+select.addEventListener("change", setOutput);
+
+function setOutput() {
+  const selectedOptionValue = select.value;
+  const selectedOptionIndex = select.selectedIndex;
+  const selectedOptionText = select.options[selectedOptionIndex].text;
+
+  textOutput.textContent = selectedOptionText;
+  valueOutput.textContent = selectedOptionValue;
 }
