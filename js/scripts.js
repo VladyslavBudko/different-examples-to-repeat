@@ -55,13 +55,34 @@
 
 
 
-// 5
+// // 5
 
-document.addEventListener("keydown", event => {
-    event.preventDefault();
+// document.addEventListener("keydown", event => {
+//     event.preventDefault();
   
-    if ((event.ctrlKey || event.metaKey) && event.code === "KeyS") {
-      console.log("«Ctrl + s» or «Command + s» combo");
-    }
-  });
+//     if ((event.ctrlKey || event.metaKey) && event.code === "KeyS") {
+//       console.log("«Ctrl + s» or «Command + s» combo");
+//     }
+//   });
   
+
+
+// 6
+
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const {
+    elements: { login, password }
+  } = event.currentTarget;
+
+  if (login.value === "" || password.value === "") {
+    return console.log("Please fill in all the fields!");
+  }
+
+  console.log(`Login: ${login.value}, Password: ${password.value}`);
+  event.currentTarget.reset();
+}
